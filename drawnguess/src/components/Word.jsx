@@ -2,7 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 import { useEffect, useContext } from 'react';
 import { GameContext } from '../context/GameContext'
-import Guessing from './Guessing';
+import Drawing from './Drawing';
 var randomWords = require('random-words');
 
 const wordArray = (randomWords({ exactly: 5, maxLength: 8}));
@@ -41,7 +41,7 @@ const Word = () => {
       <button value="easyWord" onClick={e => chooseWord(e.target.value)}>{gameContext.easyWord.value}</button>
       <button value="mediumWord" onClick={e => chooseWord(e.target.value)}>{gameContext.mediumWord.value}</button>
       <button value="hardWord" onClick={e => chooseWord(e.target.value)}>{gameContext.hardWord.value}</button>
-      { play && <Guessing/>}
+      { play && <Drawing/>}
     </div>
   );
 };
