@@ -10,18 +10,16 @@ function App() {
 
   return (
     <div className="App">
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Wellcome />} />
-        <Route path="waiting/" element={<Waiting />} />
-        <Route path="game/" element={<Word />} />
-        <Route path="guessing/" element={<Guessing />} />
-      </Routes>
-    </BrowserRouter>
       <GameContext.Provider value={words}>
         <PlayersContext.Provider value={players}>
-          <Wellcome/>
-          {/* <Word/> */}
+          <BrowserRouter>
+            <Routes>
+              <Route path="/" element={<Wellcome />} />
+              <Route path="waiting/" element={<Waiting />} />
+              <Route path="game/" element={<Word />} />
+              <Route path="guessing/" element={<Guessing />} />
+            </Routes>
+          </BrowserRouter>
         </PlayersContext.Provider>
       </GameContext.Provider>
     </div>

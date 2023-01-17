@@ -1,10 +1,10 @@
 import React from 'react';
 import { useContext } from 'react';
 import { PlayersContext } from '../context/GameContext'
-
+import { useNavigate } from "react-router-dom";
 
 const Wellcome = () => {
-
+  let navigate = useNavigate();
   const playersContext = useContext(PlayersContext);
 
   function handleChange(event) {
@@ -22,20 +22,23 @@ const Wellcome = () => {
   function onClick(){
     if(playersContext.existingPlayer){
       console.log('continue - guess');
+      navigate("/game");
+
     } else {
       playersContext.existingPlayer = true;
       console.log('wait');
+      navigate("/waiting");
     }
   }
 
   console.log('asa PlayersContext', playersContext.existingPlayer)
   console.log('name PlayersContext', playersContext.player1.name)
-
-
-    /// wait to the other player join and that get the word component
   return (
     <div>
-      <h1>Please wait to the second player to join</h1>
+      <h1>Wellcome!</h1>
+       <p>Create a game</p>
+       <input name="name" onChange={handleChange} />
+       <button onClick={onClick}> Join/Start a game</button>
     </div>
   );
 };
