@@ -7,4 +7,11 @@ export const words = {
     chosenWord: {value: '', level: '', points: 0}
 }
 
-export const GameContext = createContext(words);
+export const players = {
+    existingPlayer: false,
+    player1: {name: '', score: 0},
+    player2: {name: '', score: 0},
+}
+
+export const GameContext = createContext();
+export const PlayersContext = createContext();

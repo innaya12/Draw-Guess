@@ -6,7 +6,7 @@ import Drawing from './Drawing';
 var randomWords = require('random-words');
 
 const wordArray = (randomWords({ exactly: 5, maxLength: 8}));
-/// getting to choose from 3 levels of word & choosing
+/// getting 5 words > searching for the 3 words length needed >  choosing
 const Word = () => {
   const [play, setPlay] = useState(false);
   const gameContext = useContext(GameContext);
