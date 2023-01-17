@@ -1,44 +1,45 @@
 import React from 'react';
-import { useState, useEffect } from 'react';
-import Drawing from './Drawing'
+import { useEffect, useContext } from 'react';
+import { GameContext } from '../context/GameContext'
+import Guessing from './Guessing';
 var randomWords = require('random-words');
 
 /// getting to choose from 3 levels of word
 /// choosing > than getting the drawing component
 const Word = () => {
-  const [easyWord, setEasyWord] = useState('');
-  const [mediumWord, setMediumWord] = useState('');
-  const [hardWord, setHardWord] = useState('');
-
+  const gameContext = useContext(GameContext);
+  console.log('gameContext word', gameContext)
   useEffect(()=>{
     let wordArray = (randomWords({ exactly: 5, maxLength: 8}));
     console.log(wordArray);
     wordArray.map(word =>{
       if(word.length === 3 || word.length === 4){
-        setEasyWord(word)
+        gameContext.easyWord.value = word
       } else if(word.length === 5 ){
-        setMediumWord(word)
+        gameContext.mediumWord.value = word
       } else if (word.length >= 6 ){
-        setHardWord(word)
+        gameContext.hardWord.value = word
       }
     });
 
-}, []);
+  }, [gameContext.easyWord, gameContext.hardWord, gameContext.mediumWord]);
 
 
-  function chooseWord(word){
+  function chooseWord(chosenWord){
+
+    gameContext.chosenWord = { value: gameContext.chosenWord.value, level: chosenWord }
+
     /// choosing a word - passing it to the drawing component
   }
-
-
   
   return (
     <div>
       <h1>choose a word</h1>
       <p>Please choose what you want to draw!</p>
-      <button value="easy" name={easyWord} onClick={e => chooseWord(e.target.name)}>{easyWord}</button>
-      <button value="medium" name={mediumWord} onClick={e => chooseWord(e.target.name)}>{mediumWord}</button>
-      <button value="hard" name={hardWord} onClick={e => chooseWord(e.target.name)}>{hardWord}</button>
+      <button value="easy" onClick={e => chooseWord(e.target.value)}>{gameContext.easyWord.value}</button>
+      <button value="medium" onClick={e => chooseWord(e.target.value)}>{gameContext.mediumWord.value}</button>
+      <button value="hard" onClick={e => chooseWord(e.target.value)}>{gameContext.hardWord.value}</button>
+      <Guessing/>
     </div>
   );
 };

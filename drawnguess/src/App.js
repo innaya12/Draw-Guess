@@ -1,11 +1,15 @@
 import './App.css';
-import Word from './components/Word'
+import { words, GameContext } from './context/GameContext';
+import Word from './components/Word';
 
 function App() {
+
   return (
     <div className="App">
-      <h2>my game</h2>
-      <Word/>
+      <GameContext.Provider value={words}>
+        <h2>my game</h2>
+        <Word/>
+      </GameContext.Provider>
     </div>
   );
 }
