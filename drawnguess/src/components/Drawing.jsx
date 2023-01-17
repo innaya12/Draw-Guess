@@ -6,7 +6,7 @@ const Drawing = () => {
 
   return (
     <div>
-      <h1>paiting </h1>
+      <h1>Drawing </h1>
     </div>
   );
 };
