@@ -23,7 +23,8 @@ const Canvas = ({ width, height}) => {
     }
 
     return(
-        <canvas width={width} 
+        <canvas id="canvas" 
+                width={width} 
                 height={height} 
                 style={canvasStyle}
                 ref={setCanvasRef }/>
