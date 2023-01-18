@@ -9,6 +9,7 @@ export const words = {
 
 export const players = {
     existingPlayer: false,
+    currentPlayer: 'player1',
     player1: {name: '', score: 0},
     player2: {name: '', score: 0},
     image: '',

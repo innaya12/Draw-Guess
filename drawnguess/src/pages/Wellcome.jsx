@@ -31,7 +31,7 @@ const Wellcome = () => {
       navigate("/waiting");
       /// after the second player is joing - this player needs to be sent to /game
     }
-  };
+  }
 
   return (
     <div>
