@@ -37,7 +37,6 @@ const Wellcome = () => {
     <div>
       <h1>Wellcome!</h1>
        <p>Create a game</p>
-       <input name="name" onChange={handleChange} />
        <input placeholder="name" name="name" onChange={handleChange} />
        <button onClick={onClick}> Join/Start a game</button>
     </div>
