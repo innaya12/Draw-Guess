@@ -12,9 +12,9 @@ export function useOnDraw(onDraw){
 
     useEffect(() => {
         return () => {
-            if(mouseMoveListenerRef.current){
-                window.removeEventListener("mousemove", mouseMoveListenerRef.current);
-            }
+            // if(mouseMoveListenerRef.current){
+            //     window.removeEventListener("mousemove", mouseMoveListenerRef.current);
+            // }
             if(mouseUpListenerRef.current){
                 window.removeEventListener("mouseup", mouseUpListenerRef.current);
             }
