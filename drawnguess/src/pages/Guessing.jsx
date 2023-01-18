@@ -7,18 +7,16 @@ import { useNavigate } from "react-router-dom";
 
 const Guessing = () => {
   let guessingWord ;
-  const [result , setResult] = useState('')
+  const [result , setResult] = useState('');
   let navigate = useNavigate();
   const playersContext = useContext(PlayersContext);
   const gameContext = useContext(GameContext);
 
   function handleChange(e){
-    console.log(' e.target.value',  e.target.value)
     guessingWord = e.target.value;
-  }
+  };
 
   function onClick(){
-    
     if(guessingWord === gameContext.chosenWord.value){
       setResult(`Yayy. You won! You have ${gameContext.chosenWord.points} points! Now its your turn to draw!`);
       setTimeout(() => {
@@ -30,9 +28,8 @@ const Guessing = () => {
       setResult("Sorry.. you are wrong. Try again!");
 
     }
-  }
-  console.log('gameContext.chosenWord.value', gameContext.chosenWord.value)
-  console.log('result', result)
+  };
+
   return (
     <div>
       <h1>Guessing</h1>
@@ -40,8 +37,6 @@ const Guessing = () => {
       <input placeholder="what do you see?" name="name" onChange={handleChange} />
       <button onClick={onClick}> Check </button>
       {result && <p>{result}</p>}
-
-
     </div>
   );
 };
