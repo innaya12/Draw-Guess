@@ -11,6 +11,7 @@ export const players = {
     existingPlayer: false,
     player1: {name: '', score: 0},
     player2: {name: '', score: 0},
+    image: '',
 }
 
 export const GameContext = createContext();

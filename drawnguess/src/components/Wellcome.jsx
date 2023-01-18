@@ -8,7 +8,6 @@ const Wellcome = () => {
   const playersContext = useContext(PlayersContext);
 
   function handleChange(event) {
-    console.log(event.target.value);
     if(playersContext.existingPlayer){
       playersContext.player2.name = event.target.value
     } else {
@@ -24,10 +23,13 @@ const Wellcome = () => {
       console.log('continue - guess');
       navigate("/game");
 
+      //navigate("/guessing");
+
     } else {
       playersContext.existingPlayer = true;
       console.log('wait');
       navigate("/waiting");
+      /// after the second player is joing - this player needs to be sent to /game
     }
   }
 
