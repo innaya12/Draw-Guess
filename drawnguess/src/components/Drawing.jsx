@@ -3,17 +3,18 @@ import Canvas from './drawing/Canvas';
 
 const Drawing = () => {
 
-  function onClick(){
+  function saveImage(){
+    const canvas = document.getElementById('canvas');
+    const dataURL = canvas.toDataURL();
+    console.log(dataURL);
     
   }
-    /// Drawing
 
   return (
     <div>
       <h1>Drawing </h1>
       <Canvas width={700} height={500} />
-
-      <button onClick={onClick}>Send</button>
+      <button onClick={saveImage}>send</button>
     </div>
   );
 };
