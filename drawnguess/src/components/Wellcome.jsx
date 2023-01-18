@@ -35,7 +35,10 @@ const Wellcome = () => {
     /// wait to the other player join and that get the word component
   return (
     <div>
-      <h1>Please wait to the second player to join</h1>
+      <h1>Wellcome!</h1>
+       <p>Create a game</p>
+       <input placeholder="name" name="name" onChange={handleChange} />
+       <button onClick={onClick}> Join/Start a game</button>
     </div>
   );
 };
