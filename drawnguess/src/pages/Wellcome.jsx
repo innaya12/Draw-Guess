@@ -13,7 +13,7 @@ const Wellcome = () => {
     } else {
       playersContext.player1.name = event.target.value
     }
-  }
+  };
 
   ///check if there is another player
   /// if not - the player waits - go to waiting components
@@ -22,8 +22,8 @@ const Wellcome = () => {
     if(playersContext.existingPlayer){
       console.log('continue - guess');
       navigate("/game");
-
-      //navigate("/guessing");
+      // temporary for test
+      //navigate("/guessing"); 
 
     } else {
       playersContext.existingPlayer = true;
@@ -31,10 +31,8 @@ const Wellcome = () => {
       navigate("/waiting");
       /// after the second player is joing - this player needs to be sent to /game
     }
-  }
+  };
 
-  console.log('asa PlayersContext', playersContext.existingPlayer)
-  console.log('name PlayersContext', playersContext.player1.name)
   return (
     <div>
       <h1>Wellcome!</h1>

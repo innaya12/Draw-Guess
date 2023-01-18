@@ -9,7 +9,6 @@ var randomWords = require('random-words');
 const Word = () => {
   const [play, setPlay] = useState(false);
   const gameContext = useContext(GameContext);
-  console.log('gameContext word', gameContext)
   
   useEffect(()=>{
     const wordArray = (randomWords({ exactly: 5, maxLength: 8}));
@@ -28,7 +27,6 @@ const Word = () => {
 
   function chooseWord(e, chosenWord){
     console.log('check',chosenWord)
-    console.log('onclick', chosenWord, e.target.value, gameContext[e.target.value].points)
     gameContext.chosenWord = { value: chosenWord, level: e.target.value, points: gameContext[e.target.value].points }
     setPlay(true);
     /// choosing a word, saving its data in context so it will pass to the drawing component

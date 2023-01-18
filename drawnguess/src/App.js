@@ -1,10 +1,10 @@
 import './App.css';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { words, GameContext, PlayersContext, players } from './context/GameContext';
-import Wellcome from './components/Wellcome';
-import Waiting from './components/Waiting';
-import Word from './components/Word';
-import Guessing from './components/Guessing';
+import Wellcome from './pages/Wellcome';
+import Waiting from './pages/Waiting';
+import Word from './pages/Word';
+import Guessing from './pages/Guessing';
 
 function App() {
 
