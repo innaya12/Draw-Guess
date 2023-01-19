@@ -22,7 +22,6 @@ const Guessing = () => {
       setResult(`Yayy. You won! You have ${gameContext.chosenWord.points} points! Now its your turn to draw!`);
       sessionStorage.setItem(`${playersContext[playersContext.currentPlayer].name}`, gameContext.chosenWord.points);
       setTimeout(() => {
-        console.log('navigate to game');
         navigate("/game");
       }, 5000);
     } else {
