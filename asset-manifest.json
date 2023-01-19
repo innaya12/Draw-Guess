@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/%7BDraw-Guess%7D/static/css/main.aaa62523.css",
+    "main.js": "/%7BDraw-Guess%7D/static/js/main.02c2ef02.js",
+    "static/js/787.a8767053.chunk.js": "/%7BDraw-Guess%7D/static/js/787.a8767053.chunk.js",
+    "index.html": "/%7BDraw-Guess%7D/index.html",
+    "main.aaa62523.css.map": "/%7BDraw-Guess%7D/static/css/main.aaa62523.css.map",
+    "main.02c2ef02.js.map": "/%7BDraw-Guess%7D/static/js/main.02c2ef02.js.map",
+    "787.a8767053.chunk.js.map": "/%7BDraw-Guess%7D/static/js/787.a8767053.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.aaa62523.css",
+    "static/js/main.02c2ef02.js"
+  ]
+}
