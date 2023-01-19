@@ -22,14 +22,12 @@ const Wellcome = () => {
   // if yes - start playing - go to word component
   function onClick(){
     if(playersContext.existingPlayer){
-      console.log('continue - guess');
+      // temporary for one user
       navigate("/game");
-      // temporary for test
       //navigate("/guessing"); 
 
     } else {
       playersContext.existingPlayer = true;
-      console.log('wait');
       navigate("/waiting");
       /// after the second player is joing - this player needs to be sent to /game
     }

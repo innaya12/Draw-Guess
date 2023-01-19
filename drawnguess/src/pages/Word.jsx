@@ -5,7 +5,6 @@ import { useEffect, useContext } from 'react';
 import { GameContext } from '../context/GameContext'
 import Drawing from './Drawing';
 var randomWords = require('random-words');
-
 /// getting 6 words > searching for the 3 words length needed >  choosing
 const Word = () => {
   const [play, setPlay] = useState(false);
@@ -13,7 +12,6 @@ const Word = () => {
   
   useEffect(()=>{
     const wordArray = (randomWords({ exactly: 6, maxLength: 8}));
-    console.log(wordArray);
     wordArray.map(word =>{
       if(word.length === 3 || word.length === 4){
         gameContext.easyWord.value = word;

@@ -13,8 +13,7 @@ const Drawing = () => {
     const canvas = document.getElementById('canvas');
     const dataURL = canvas.toDataURL();
     playersContext.saveImage = dataURL;
-    console.log(dataURL);
-    /// this navigation is temporary for tests
+    /// this navigation is temporary for one user
     navigate("/guessing");
   };
 
