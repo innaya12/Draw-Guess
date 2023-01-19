@@ -1,0 +1,37 @@
+.wellcomeDiv{
+    position: relative;
+}
+
+.nameInput {
+    width: 70%;
+    height: 16% ;
+}
+
+button {
+    background-color: slategray;
+    color: white;
+    font-size: 14px;
+    border: 3px solid slategray;
+    border-radius: 5px;
+}
+
+h4 {
+    margin: 5px 0;
+}
+
+@media only screen and (max-width: 600px) {
+    #canvas {
+        width: 100%;
+        height: 200px;
+    }
+}
+
+.drawImg {
+    border: 1px solid black;
+}
+
+.answer {
+    width: 98%;
+    height: 10%;
+    margin: 10px 0;
+}
