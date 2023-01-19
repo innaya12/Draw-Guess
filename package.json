@@ -2,5 +2,8 @@
   "dependencies": {
     "random-words": "^1.2.1",
     "react-router-dom": "^6.6.2"
+  },
+  "devDependencies": {
+    "gh-pages": "^4.0.0"
   }
 }

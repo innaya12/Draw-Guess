@@ -3,6 +3,7 @@ import '../style/Style.css'
 import { useContext } from 'react';
 import { PlayersContext } from '../context/GameContext'
 import { useNavigate } from "react-router-dom";
+/// import Data from '../data/Data';
 
 const Wellcome = () => {
   let navigate = useNavigate();
