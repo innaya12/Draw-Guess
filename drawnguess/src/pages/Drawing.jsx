@@ -1,4 +1,5 @@
 import React from 'react';
+import '../style/Style.css'
 import { useContext } from 'react';
 import { PlayersContext } from '../context/GameContext'
 import Canvas from '../components/drawing/Canvas';
@@ -19,8 +20,8 @@ const Drawing = () => {
 
   return (
     <div>
-      <h1>Drawing </h1>
-      <Canvas width={700} height={500} />
+      <h2>Drawing </h2>
+      <Canvas/>
       <button onClick={saveImage}>send</button>
     </div>
   );

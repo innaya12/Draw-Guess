@@ -1,4 +1,5 @@
 import React from 'react';
+import '../style/Style.css'
 import { useState } from 'react';
 import { useContext } from 'react';
 import { PlayersContext } from '../context/GameContext'
@@ -31,11 +32,13 @@ const Guessing = () => {
   };
 
   return (
-    <div>
-      <h1>Guessing</h1>
-      <img src={playersContext.saveImage} />
-      <input placeholder="what do you see?" name="name" onChange={handleChange} />
-      <button onClick={onClick}> Check </button>
+    <div >
+      <h2>Guessing</h2>
+      <img className="drawImg" src={playersContext.saveImage} />
+      <input className="answer" placeholder="what do you see?" name="name" onChange={handleChange} />
+      <div>
+        <button onClick={onClick}> Check </button>
+      </div>
       {result && <p>{result}</p>}
     </div>
   );
